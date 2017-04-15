@@ -1,18 +1,19 @@
 angular.module('video-player')
-.controller('VideoPlayerController', function($scope, $sce) {
-  this.video = 'something';
+.controller('VideoPlayerController', ['$scope', function($scope) {
+  //this.video = 'something';
+  console.log($scope);
   // this.videoID = $sce.trustAsRsourceUrl(this.ctrl.playingVideo.id.videoID);
-})
+}])
 .directive('videoPlayer', function() {
   return {
-    templateUrl: 'src/templates/videoPlayer.html',
+    scope: {
+      playingvideo: '<',
+      onClick: '<'
+    },
+    controller: 'VideoPlayerController',
     restrict: 'E',
     controllerAs: 'ctrl',
     bindToController: true,
-    scope: {
-      playingVideo: '<',
-      onClick: '<'
-    },
-    controller: 'VideoPlayerController'
+    templateUrl: 'src/templates/videoPlayer.html',
   };
 });
