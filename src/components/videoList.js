@@ -9,8 +9,8 @@ angular.module('video-player')
       videos: '<',
       onClick: '<'
     },
-    controller: ['$scope', '$http', function($scope, $http) {
-    	
-    }],
+    controller: function() {
+
+    }
   };
 });
