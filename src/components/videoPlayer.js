@@ -8,7 +8,8 @@ angular.module('video-player')
   return {
     scope: {
       playingvideo: '<',
-      onClick: '<'
+      onClick: '<',
+      video: '<'
     },
     controller: 'VideoPlayerController',
     restrict: 'E',

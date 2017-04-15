@@ -1,7 +1,9 @@
 angular.module('video-player')
 .controller('AppController', function($scope) {
   this.videos = window.exampleVideoData;
-  this.selectVideo = function() {};
+  this.selectVideo = (video) => {
+    this.currentVideo = video;
+  };
   this.searchResults = function() {};
   this.currentVideo = exampleVideoData[0];
 })
