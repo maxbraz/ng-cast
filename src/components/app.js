@@ -3,7 +3,7 @@ angular.module('video-player')
   this.videos = window.exampleVideoData;
   this.selectVideo = function() {};
   this.searchResults = function() {};
-  this.currentVideo = {};
+  this.currentVideo = window.exampleVideoData[0];
 })
 .directive('app', function() {
   return {
@@ -11,6 +11,7 @@ angular.module('video-player')
     controllerAs: 'ctrl',
     bindToController: true,
     scope: {
+      
     },
     controller: 'AppController'
   };
