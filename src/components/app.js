@@ -13,7 +13,7 @@ angular.module('video-player')
     controllerAs: 'ctrl',
     bindToController: true,
     scope: {
-
+      
     },
     controller: 'AppController'
   };
